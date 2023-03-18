@@ -1,37 +1,31 @@
 package hexlet.code.games;
 
 import java.util.Random;
-import java.util.Scanner;
+
+import hexlet.code.Engine;
+
 
 
 public class Even {
     public static void start() {
-        Scanner scanner = new Scanner(System.in);
-        Random rand = new Random();
+        var rule = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        String[][] gameRounds = new String[3][];  // вопрос, ответ , вопрос , ответ
+        Engine.runGames(rule, gameRounds); // параметры методов и возвращаемое значение методов(повторить!) передача параметров по ссылке и по значению!
 
-        System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name?");
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-
-        for (int i = 0; i < 3; i++) {
-
-            int number = rand.nextInt(100);
-            System.out.println("Question:" + number);
-            System.out.println("Your answer:");
-            String answer = scanner.next();
-            String expectAnswer = number % 2 == 0 ? "yes" : "no";
-
-            if (expectAnswer.equalsIgnoreCase(answer)) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println(expectAnswer + "is wrong answer ;(. Correct answer was .\n" + answer +
-                        "Let's try again," + userName);
-                return;
-            }
+        for (var i = 0; i < 3; i++) {
+            gameRounds[i] = generateRound();
+            // создать константу, так как упоминается в нескольких местах. Это позволяет изменить только одну константу
         }
-        System.out.println("Congratulations," + userName + "!");
     }
-}
+    public static String[] generateRound() {
+        String[] result= new String[2];   // генерация раундов, вопрос и ответ (генерация под массива)
+        Random rand = new Random();
+        int number = rand.nextInt(100);
+        result[0] = String.valueOf(number);
+       result[1] = number % 2 == 0 ? "yes" : "no"; // return ??
+        return result;
+    }
+
+    }
+
 
