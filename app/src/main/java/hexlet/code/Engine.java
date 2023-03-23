@@ -15,7 +15,7 @@ public class Engine {
 
         for (var result : gameRounds) {    // два цикла для генеарции вопросов и для отыгрыша
             System.out.println("Question: " + result[0]);
-            System.out.println("Answer:");
+            System.out.println("Answer: ");
             String answer = scanner.next();
 
             if (answer.equalsIgnoreCase(result[1])) {
