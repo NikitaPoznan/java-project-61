@@ -7,7 +7,7 @@ import java.util.Random;
 public class GCD {
 
     public static void start() {
-        var rule = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        var rule = "Find the greatest common divisor of given numbers.";
         String[][] gameRounds = new String[3][2];  // вопрос, ответ , вопрос , ответ
         // параметры методов и возвращаемое значение методов(повторить!) передача параметров по ссылке и по значению!
 
