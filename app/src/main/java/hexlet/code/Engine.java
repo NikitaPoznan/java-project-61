@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int ROUND_COUNT = 3;
-   public static final int MAX_NUMBER = 100;
-   
+    public static final int MAX_NUMBER = 100;
 
     public static void runGames(String rule, String[][] gameRounds) {
         Scanner scanner = new Scanner(System.in);

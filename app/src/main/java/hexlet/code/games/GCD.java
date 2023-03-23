@@ -4,8 +4,8 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
-import static hexlet.code.Engine.ROUND_COUNT;
 import static hexlet.code.Engine.MAX_NUMBER;
+import static hexlet.code.Engine.ROUND_COUNT;
 
 public class GCD {
 
