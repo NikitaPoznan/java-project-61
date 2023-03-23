@@ -5,6 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 import static hexlet.code.Engine.ROUND_COUNT;
+import static hexlet.code.Engine.MAX_NUMBER;
 
 public class Prime {
     public static void start() {
@@ -23,7 +24,7 @@ public class Prime {
     private static String[] generateRound() {
         String[] result = new String[2];   // генерация раундов, вопрос и ответ (генерация под массива)
         Random rand = new Random();
-        int number = rand.nextInt(102);
+        int number = rand.nextInt(MAX_NUMBER);
         result[0] = String.valueOf(number);
         result[1] = countPrime(number) ? "yes" : "no";
         return result;

@@ -5,6 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 import static hexlet.code.Engine.ROUND_COUNT;
+import static hexlet.code.Engine.MAX_NUMBER;
 
 
 public class Calc {
@@ -14,7 +15,7 @@ public class Calc {
         String[][] gameRounds = new String[ROUND_COUNT][];  //
         // параметры методов и возвращаемое значение методов(повторить!) передача параметров по ссылке и по значению!
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < ROUND_COUNT; i++) {
             gameRounds[i] = generateRound();
 
         }
@@ -24,8 +25,8 @@ public class Calc {
     public static String[] generateRound() {
         Random random = new Random();
         String[] result = new String[2];
-        var firstNumber = random.nextInt(50);
-        var secondNumber = random.nextInt(10);
+        var firstNumber = random.nextInt(MAX_NUMBER);
+        var secondNumber = random.nextInt(MAX_NUMBER);
         var operationPossibles = "+-*";
         var operation = operationPossibles.charAt((int) (Math.random() * operationPossibles.length()));
         result[0] = String.format("%s %s %s", firstNumber, operation, secondNumber);
