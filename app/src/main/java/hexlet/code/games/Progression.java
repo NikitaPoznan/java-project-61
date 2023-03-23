@@ -8,7 +8,9 @@ import static hexlet.code.Engine.ROUND_COUNT;
 
 
 public class Progression {
-
+private static final int START_NUMBER = 20;
+private static final int PROGRESSION_BORDER = 10;
+private static final int STEP_STEP = 5;
     public static void start() {
         var rule = "What number is missing in the progression?";
         String[][] gameRounds = new String[ROUND_COUNT][];  // вопрос, ответ , вопрос , ответ
@@ -26,9 +28,9 @@ public class Progression {
         String[] result = new String[2];
         Random rand = new Random();
 
-        var firstNumber = rand.nextInt(20);
-        var lengthProgression = 10; // a(n+1) = an + d
-        var step = rand.nextInt(5);
+        var firstNumber = rand.nextInt(START_NUMBER);
+        var lengthProgression = PROGRESSION_BORDER;
+        var step = rand.nextInt(STEP_STEP);
         var randomIndex = rand.nextInt(lengthProgression - 1);
         var progressionItems = generateProgression(firstNumber, lengthProgression, step);
 
