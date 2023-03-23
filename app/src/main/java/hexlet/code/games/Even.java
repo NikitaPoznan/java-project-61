@@ -1,8 +1,8 @@
 package hexlet.code.games;
 
-import java.util.Random;
-
 import hexlet.code.Engine;
+
+import java.util.Random;
 
 import static hexlet.code.Engine.ROUND_COUNT;
 
@@ -11,7 +11,7 @@ public class Even {
     public static void start() {
         var rule = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] gameRounds = new String[ROUND_COUNT][];  // вопрос, ответ , вопрос , ответ
-         // параметры методов и возвращаемое значение методов(повторить!) передача параметров по ссылке и по значению!
+        // параметры методов и возвращаемое значение методов(повторить!) передача параметров по ссылке и по значению!
 
         for (var i = 0; i < ROUND_COUNT; i++) {
             gameRounds[i] = generateRound();
@@ -20,15 +20,16 @@ public class Even {
         }
         Engine.runGames(rule, gameRounds);
     }
+
     public static String[] generateRound() {
-        String[] result= new String[2];   // генерация раундов, вопрос и ответ (генерация под массива)
+        String[] result = new String[2];   // генерация раундов, вопрос и ответ (генерация под массива)
         Random rand = new Random();
         int number = rand.nextInt(100);
         result[0] = String.valueOf(number);
-       result[1] = number % 2 == 0 ? "yes" : "no";
+        result[1] = number % 2 == 0 ? "yes" : "no";
         return result;
     }
 
-    }
+}
 
 

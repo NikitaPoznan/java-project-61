@@ -21,7 +21,7 @@ public class Prime {
     }
 
     private static String[] generateRound() {
-        String[] result= new String[2];   // генерация раундов, вопрос и ответ (генерация под массива)
+        String[] result = new String[2];   // генерация раундов, вопрос и ответ (генерация под массива)
         Random rand = new Random();
         int number = rand.nextInt(102);
         result[0] = String.valueOf(number);
@@ -30,14 +30,14 @@ public class Prime {
     }
 
     private static boolean countPrime(int number) {
-        if(number <=1){
+        if (number <= 1) {
             return false;
         }
 
-        for (int i = 2; i <= number/2 ; i++) {
-      if(number % i == 0){
-          return false;
-      }
+        for (int i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+                return false;
+            }
 
         }
         return true;

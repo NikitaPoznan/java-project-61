@@ -12,7 +12,7 @@ public class Calc {
     public static void start() {
         var rule = "What is the result of the expression?";
         String[][] gameRounds = new String[ROUND_COUNT][];  //
-         // параметры методов и возвращаемое значение методов(повторить!) передача параметров по ссылке и по значению!
+        // параметры методов и возвращаемое значение методов(повторить!) передача параметров по ссылке и по значению!
 
         for (var i = 0; i < 3; i++) {
             gameRounds[i] = generateRound();
@@ -28,7 +28,7 @@ public class Calc {
         var secondNumber = random.nextInt(10);
         var operationPossibles = "+-*";
         var operation = operationPossibles.charAt((int) (Math.random() * operationPossibles.length())); // char воспринимается как int
-        result[0] = String.format("%s %s %s", firstNumber , operation , secondNumber);
+        result[0] = String.format("%s %s %s", firstNumber, operation, secondNumber);
         result[1] = String.valueOf(calculate(firstNumber, secondNumber, operation));
         return result;
 

@@ -29,14 +29,14 @@ public class Progression {
         var firstNumber = rand.nextInt(20);
         var lengthProgression = rand.nextInt(10); // a(n+1) = an + d
         var step = rand.nextInt(5);
-        var randomIndex = rand.nextInt(lengthProgression -1 );
-        var progressionItems = generateProgression(firstNumber,lengthProgression,step);
+        var randomIndex = rand.nextInt(lengthProgression - 1);
+        var progressionItems = generateProgression(firstNumber, lengthProgression, step);
 
         result[0] = progressionItems[randomIndex];
         progressionItems[randomIndex] = "..";
         result[1] = String.join(" ", progressionItems);
 
-return result;
+        return result;
 // требуется создать метод, в котором складывалось разница с первым числом и создать заявленный цикл?
 
     }
@@ -52,8 +52,7 @@ return result;
         return progressionItems;
     }
 
-    }
-
+}
 
 
 // результирующий массив, цикл заполняем, в цикле по счётчику
