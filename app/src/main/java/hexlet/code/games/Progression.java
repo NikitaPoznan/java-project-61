@@ -12,12 +12,12 @@ public class Progression {
     public static void start() {
         var rule = "What number is missing in the progression?";
         String[][] gameRounds = new String[ROUND_COUNT][];  // вопрос, ответ , вопрос , ответ
-        // параметры методов и возвращаемое значение методов(повторить!) передача параметров по ссылке и по значению!
+
 
         for (var i = 0; i < ROUND_COUNT; i++) {
             gameRounds[i] = generateRound();
 
-            // создать константу, так как упоминается в нескольких местах. Это позволяет изменить только одну константу
+
         }
         Engine.runGames(rule, gameRounds);
     }
@@ -27,17 +27,17 @@ public class Progression {
         Random rand = new Random();
 
         var firstNumber = rand.nextInt(20);
-        var lengthProgression = rand.nextInt(10); // a(n+1) = an + d
+        var lengthProgression = 10; // a(n+1) = an + d
         var step = rand.nextInt(5);
         var randomIndex = rand.nextInt(lengthProgression - 1);
         var progressionItems = generateProgression(firstNumber, lengthProgression, step);
 
-        result[0] = progressionItems[randomIndex];
+        result[1] = progressionItems[randomIndex];
         progressionItems[randomIndex] = "..";
-        result[1] = String.join(" ", progressionItems);
+        result[0] = String.join(" ", progressionItems);
 
         return result;
-// требуется создать метод, в котором складывалось разница с первым числом и создать заявленный цикл?
+
 
     }
 
@@ -54,8 +54,3 @@ public class Progression {
 
 }
 
-
-// результирующий массив, цикл заполняем, в цикле по счётчику
-// result [i] = result [i - 1] + step  // предыдущий элемент массива
-// result [i] = firstNumber + i * step
-// String join  чтобы соединить массив в одну строку, у нас есть последовательность по элементам и нужно это сделать два раза

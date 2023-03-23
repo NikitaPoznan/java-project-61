@@ -27,7 +27,7 @@ public class Calc {
         var firstNumber = random.nextInt(50);
         var secondNumber = random.nextInt(10);
         var operationPossibles = "+-*";
-        var operation = operationPossibles.charAt((int) (Math.random() * operationPossibles.length())); // char воспринимается как int
+        var operation = operationPossibles.charAt((int) (Math.random() * operationPossibles.length()));
         result[0] = String.format("%s %s %s", firstNumber, operation, secondNumber);
         result[1] = String.valueOf(calculate(firstNumber, secondNumber, operation));
         return result;
@@ -46,9 +46,4 @@ public class Calc {
 
     }
 }
-
-// a b
-// a % b
-
-// while (a!==0 && b!==0)   // отдельный метод ( два параметра)
 

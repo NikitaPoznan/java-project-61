@@ -3,7 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static final int ROUND_COUNT= 3;
+    public static final int ROUND_COUNT = 3;
+
     public static void runGames(String rule, String[][] gameRounds) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
@@ -20,12 +21,12 @@ public class Engine {
             if (answer.equalsIgnoreCase(result[1])) {
                 System.out.println("Correct!");
             } else {
-                System.out.println(answer + " is wrong answer ;(. Correct answer was .\n" + result[1] +
-                        " Let's try again," + userName);
-                 return;
+                System.out.println(answer + " is wrong answer ;(. Correct answer was .\n" + result[1]
+                        + " Let's try again," + userName);
+                return;
 
             }
         }
         System.out.println("Congratulations," + userName + "!");
     }
- }
+}
