@@ -19,14 +19,14 @@ public class Engine {
             System.out.println("Answer: ");
             String answer = scanner.next();
 
-            if (answer.equalsIgnoreCase(result[1])) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println(answer + " is wrong answer ;(. Correct answer was .\n" + result[1]
-                        + " Let's try again, " + userName + "!");
+            if (!answer.equalsIgnoreCase(result[1])) {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result[1] + "'.");
+                System.out.println("Let's try again, " + userName + "!");
                 return;
 
+
             }
+            System.out.println("Correct!");
         }
         System.out.println("Congratulations, " + userName + "!");
     }
