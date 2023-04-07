@@ -9,7 +9,7 @@ import static hexlet.code.Engine.ROUND_COUNT;
 
 public class Progression {
     private static final int START_NUMBER = 20;
-    private static final int PROGRESSION_BORDER = 10;
+    private static final int PROGRESSION_SIZE = 10;
     private static final int STEP_STEP = 5;
 
     public static void start() {
@@ -30,10 +30,9 @@ public class Progression {
         Random rand = new Random();
 
         var firstNumber = rand.nextInt(START_NUMBER);
-        var lengthProgression = PROGRESSION_BORDER;
         var step = rand.nextInt(STEP_STEP);
-        var randomIndex = rand.nextInt(lengthProgression - 1);
-        var progressionItems = generateProgression(firstNumber, lengthProgression, step);
+        var randomIndex = rand.nextInt(PROGRESSION_SIZE - 1);
+        var progressionItems = generateProgression(firstNumber, PROGRESSION_SIZE, step);
 
         result[1] = progressionItems[randomIndex];
         progressionItems[randomIndex] = "..";

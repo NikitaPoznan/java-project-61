@@ -27,10 +27,13 @@ public class Even {
         Random rand = new Random();
         int number = rand.nextInt(MAX_NUMBER);
         result[0] = String.valueOf(number);
-        result[1] = number % 2 == 0 ? "yes" : "no";
+        result[1] = isEven(number) ? "yes" : "no";
         return result;
     }
 
+    public static boolean isEven(int number){
+        return number % 2 == 0;
+    }
 }
 
 
