@@ -25,11 +25,11 @@ public class Prime {
         Random rand = new Random();
         int number = rand.nextInt(MAX_NUMBER);
         result[0] = String.valueOf(number);
-        result[1] = isCountPrime(number) ? "yes" : "no";
+        result[1] = isPrime(number) ? "yes" : "no";
         return result;
     }
 
-    private static boolean isCountPrime(int number) {
+    private static boolean isPrime(int number) {
         if (number <= 1) {
             return false;
         }

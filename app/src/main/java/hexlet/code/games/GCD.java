@@ -28,12 +28,12 @@ public class GCD {
         int secondNumber = rand.nextInt(MAX_NUMBER);
 
         result[0] = firstNumber + " " + secondNumber;
-        result[1] = String.valueOf(gcd(firstNumber, secondNumber));
+        result[1] = String.valueOf(calculateGcd(firstNumber, secondNumber));
         return result;
 
     }
 
-    public static int gcd(int firstNumber, int secondNumber) {
+    public static int calculateGcd(int firstNumber, int secondNumber) {
         while (firstNumber != 0 && secondNumber != 0) {
             if (firstNumber > secondNumber) {
                 firstNumber = firstNumber % secondNumber;
