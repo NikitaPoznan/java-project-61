@@ -14,7 +14,7 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(rule);
 
-        for (var result : gameRounds) {    // два цикла для генеарции вопросов и для отыгрыша
+        for (var result : gameRounds) {
             System.out.println("Question: " + result[0]);
             System.out.println("Answer: ");
             String answer = scanner.next();

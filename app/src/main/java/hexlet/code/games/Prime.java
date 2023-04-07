@@ -10,19 +10,18 @@ import static hexlet.code.Engine.ROUND_COUNT;
 public class Prime {
     public static void start() {
         var rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] gameRounds = new String[ROUND_COUNT][];  // вопрос, ответ , вопрос , ответ
-        // параметры методов и возвращаемое значение методов(повторить!) передача параметров по ссылке и по значению!
+        String[][] gameRounds = new String[ROUND_COUNT][];
 
         for (var i = 0; i < ROUND_COUNT; i++) {
             gameRounds[i] = generateRound();
 
-            // создать константу, так как упоминается в нескольких местах. Это позволяет изменить только одну константу
+
         }
         Engine.runGames(rule, gameRounds);
     }
 
     private static String[] generateRound() {
-        String[] result = new String[2];   // генерация раундов, вопрос и ответ (генерация под массива)
+        String[] result = new String[2];
         Random rand = new Random();
         int number = rand.nextInt(MAX_NUMBER);
         result[0] = String.valueOf(number);

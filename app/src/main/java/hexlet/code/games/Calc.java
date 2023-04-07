@@ -37,7 +37,7 @@ public class Calc {
     }
 
     private static int calculate(int firstNumber, int secondNumber, char operation) {
-        if (operation == '+') {         // лучше сделать через switch
+        if (operation == '+') {
             return firstNumber + secondNumber;
         } else if (operation == '-') {
             return firstNumber - secondNumber;

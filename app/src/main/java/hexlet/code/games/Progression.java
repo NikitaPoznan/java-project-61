@@ -14,7 +14,7 @@ public class Progression {
 
     public static void start() {
         var rule = "What number is missing in the progression?";
-        String[][] gameRounds = new String[ROUND_COUNT][];  // вопрос, ответ , вопрос , ответ
+        String[][] gameRounds = new String[ROUND_COUNT][];
 
 
         for (var i = 0; i < ROUND_COUNT; i++) {
