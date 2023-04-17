@@ -1,8 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
-import java.util.Random;
 
 import static hexlet.code.Engine.MAX_NUMBER;
 import static hexlet.code.Engine.ROUND_COUNT;
@@ -22,8 +22,7 @@ public class Prime {
 
     private static String[] generateRound() {
         String[] result = new String[2];
-        Random rand = new Random();
-        int number = rand.nextInt(MAX_NUMBER);
+        int number = Utils.generateNumber(MAX_NUMBER);
         result[0] = String.valueOf(number);
         result[1] = isPrime(number) ? "yes" : "no";
         return result;

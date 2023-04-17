@@ -1,8 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
-import java.util.Random;
 
 import static hexlet.code.Engine.MAX_NUMBER;
 import static hexlet.code.Engine.ROUND_COUNT;
@@ -23,10 +23,9 @@ public class Calc {
     }
 
     public static String[] generateRound() {
-        Random random = new Random();
         String[] result = new String[2];
-        var firstNumber = random.nextInt(MAX_NUMBER);
-        var secondNumber = random.nextInt(MAX_NUMBER);
+        var firstNumber = Utils.generateNumber(MAX_NUMBER);
+        var secondNumber = Utils.generateNumber(MAX_NUMBER);
         var operationPossibles = "+-*";
         var operation = operationPossibles.charAt((int) (Math.random() * operationPossibles.length()));
         result[0] = String.format("%s %s %s", firstNumber, operation, secondNumber);

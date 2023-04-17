@@ -1,8 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
-import java.util.Random;
 
 import static hexlet.code.Engine.ROUND_COUNT;
 
@@ -27,11 +27,11 @@ public class Progression {
 
     public static String[] generateRound() {
         String[] result = new String[2];
-        Random rand = new Random();
 
-        var firstNumber = rand.nextInt(START_NUMBER);
-        var step = rand.nextInt(STEP_STEP);
-        var randomIndex = rand.nextInt(PROGRESSION_SIZE - 1);
+
+        var firstNumber = Utils.generateNumber(START_NUMBER);
+        var step = Utils.generateNumber(STEP_STEP);
+        var randomIndex = Utils.generateNumber(PROGRESSION_SIZE - 1);
         var progressionItems = generateProgression(firstNumber, PROGRESSION_SIZE, step);
 
         result[1] = progressionItems[randomIndex];

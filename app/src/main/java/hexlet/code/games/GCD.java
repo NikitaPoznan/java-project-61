@@ -1,8 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
-import java.util.Random;
+
 
 import static hexlet.code.Engine.MAX_NUMBER;
 import static hexlet.code.Engine.ROUND_COUNT;
@@ -23,9 +24,8 @@ public class GCD {
 
     public static String[] generateRound() {
         String[] result = new String[2];
-        Random rand = new Random();
-        int firstNumber = rand.nextInt(MAX_NUMBER);
-        int secondNumber = rand.nextInt(MAX_NUMBER);
+        int firstNumber = Utils.generateNumber(MAX_NUMBER);
+        int secondNumber = Utils.generateNumber(MAX_NUMBER);
 
         result[0] = firstNumber + " " + secondNumber;
         result[1] = String.valueOf(calculateGcd(firstNumber, secondNumber));
